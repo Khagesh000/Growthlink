@@ -1,0 +1,203 @@
+.portfolio-view {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem 1.5rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    background: linear-gradient(135deg, #f0f4ff, #ffffff);
+    animation: fadeIn 0.6s ease-in-out;
+  
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  
+    // 🔹 Profile section - stacked layout
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 4rem;
+  
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+  
+      .profile-details {
+        h1 {
+          font-size: 2.5rem;
+          color: #007bff;
+          margin-bottom: 0.5rem;
+        }
+  
+        h3 {
+          font-size: 1.4rem;
+          color: #555;
+          margin-bottom: 0.8rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #444;
+          margin-bottom: 0.4rem;
+        }
+  
+        .contact-info {
+          margin-top: 1rem;
+          font-size: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 0.3rem;
+  
+          span {
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+  
+            svg {
+              color: #007bff;
+            }
+          }
+        }
+      }
+    }
+  
+    // 🔹 Skills section
+    .skills {
+      margin-bottom: 3.5rem;
+  
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 3px solid #007bff;
+        display: inline-block;
+        padding-bottom: 0.4rem;
+      }
+  
+      ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+        list-style: none;
+        padding: 0;
+  
+        li {
+          background: linear-gradient(to right, #f7faff, #d6e4ff);
+          color: #003366;
+          padding: 1rem;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+          transition: transform 0.2s ease;
+  
+          &:hover {
+            transform: translateY(-3px);
+          }
+  
+          strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 0.3rem;
+          }
+        }
+      }
+    }
+  
+    // 🔹 Projects section
+    .projects {
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border-bottom: 3px solid #007bff;
+        display: inline-block;
+        padding-bottom: 0.4rem;
+      }
+  
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+      }
+  
+      .project-card {
+        background: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+  
+        h3 {
+          font-size: 1.3rem;
+          color: #222;
+          margin-bottom: 0.6rem;
+        }
+  
+        p {
+          font-size: 0.95rem;
+          color: #555;
+          margin-bottom: 1rem;
+        }
+  
+        a {
+          background: linear-gradient(to right, #007bff, #00c6ff);
+          color: white;
+          text-decoration: none;
+          padding: 0.6rem 1.2rem;
+          border-radius: 6px;
+          font-weight: 500;
+          box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+          transition: background 0.3s ease;
+  
+          &:hover {
+            background: linear-gradient(to right, #0056b3, #0099cc);
+          }
+        }
+      }
+    }
+  
+    // 🔹 Responsive layout
+    @media (max-width: 768px) {
+      .profile-img {
+        width: 160px;
+        height: 160px;
+      }
+  
+      .profile-details h1 {
+        font-size: 2.1rem;
+      }
+  
+      .skills ul {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      }
+  
+      .projects .project-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  

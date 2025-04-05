@@ -1,0 +1,125 @@
+.portfolio-form {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background: linear-gradient(to right, #ffffff, #f4f9ff);
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeInUp 0.7s ease forwards;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // 🔹 Top Title and Instructions
+  .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
+    }
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: #003366;
+    font-size: 1.7rem;
+    border-left: 5px solid #007bff;
+    padding-left: 0.75rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: 0.3s ease all;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .skill-block,
+  .project-block {
+    background: #eef4ff;
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #80bdff;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #e4efff;
+    }
+  }
+
+  button {
+    padding: 0.8rem 1.6rem;
+    font-size: 1rem;
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    transition: 0.3s ease all;
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.25);
+
+    &:hover {
+      background: linear-gradient(to right, #0056b3, #0096c7);
+      transform: translateY(-2px);
+    }
+
+    &.submit-btn {
+      display: block;
+      width: 100%;
+      margin-top: 2rem;
+      background: linear-gradient(to right, #28a745, #62d46f);
+      box-shadow: 0 6px 18px rgba(40, 167, 69, 0.2);
+
+      &:hover {
+        background: linear-gradient(to right, #218838, #50c85c);
+      }
+    }
+  }
+
+  .submitted-message {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
